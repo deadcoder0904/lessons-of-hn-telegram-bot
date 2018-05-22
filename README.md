@@ -4,6 +4,8 @@
 
 Checkout [Serverless Hello World](https://github.com/deadcoder0904/serverless-hello-world) for Deployment Info
 
+You also need to change `.env.example` file to `.env` file & set the environment variables to run it
+
 Join at https://t.me/lessonsofhn
 
 Every Sunday at 10:00 am UTC, you'll get a notification that will help you learn something about startups, programming, life and much more
