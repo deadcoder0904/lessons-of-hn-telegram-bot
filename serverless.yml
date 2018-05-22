@@ -1,0 +1,11 @@
+service: lessons-of-hn-telegram-bot
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  cron:
+    handler: handler.run
+    events:
+      - schedule: cron(0 10 ? * SUN *)
