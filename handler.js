@@ -1,15 +1,26 @@
-const { lessonsOfHN } = require("./src/lessonsOfHN");
-const { writeToTelegram } = require("./src/writeToTelegram");
+const axios = require("axios");
 
-module.exports.run = async (event, context, callback) => {
+const { lessonsOfHN } = require("./src/lessonsOfHN");
+
+exports.run = async (event, context, callback) => {
   const time = new Date();
   console.log(`Your cron function "${context.functionName}" ran at ${time}`);
 
-  try {
-    const lesson = await lessonsOfHN();
-    await writeToTelegram(lesson);
-    callback(null, { success: true });
-  } catch (e) {
-    callback(e, { success: true });
-  }
+  const lesson = await lessonsOfHN();
+  const ENDPOINT = `https://api.telegram.org/bot${
+    process.env.BOT_API_KEY
+  }/sendMessage`;
+
+  await axios({
+    method: "get",
+    url: ENDPOINT,
+    data: {
+      chat_id: process.env.CHANNEL_ID,
+      parse_mode: "markdown",
+      disable_web_page_preview: true,
+      text: lesson
+    }
+  });
+
+  callback(null, { lesson, success: true });
 };

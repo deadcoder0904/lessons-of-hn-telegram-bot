@@ -3,7 +3,7 @@ service: lessons-of-hn-telegram-bot
 provider:
   name: aws
   runtime: nodejs8.10
-	environment:
+  environment:
     BOT_API_KEY: ${file(./env.json):BOT_API_KEY}
     CHANNEL_ID: ${file(./env.json):CHANNEL_ID}
 

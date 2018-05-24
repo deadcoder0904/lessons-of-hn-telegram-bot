@@ -63,3 +63,5 @@ env.json
 
 # Serverless directories
 .serverless
+
+.DS_Store

@@ -11,7 +11,7 @@ const LESSONS_OF_HN_FEED =
 const replaceNewlineWithSpace = val =>
   val.replace(/(\r\n|\n|\r|\t|&nbsp;)/gm, " ");
 
-module.exports.lessonsOfHN = async () => {
+exports.lessonsOfHN = async () => {
   let feed = await parser.parseURL(LESSONS_OF_HN_FEED);
   const endingLine =
     "If you enjoy this newsletter please share the HN Lessons&nbsp;website on any social platform to spread the word. Feedback is always appreciated, just reply to this e-mail.";
