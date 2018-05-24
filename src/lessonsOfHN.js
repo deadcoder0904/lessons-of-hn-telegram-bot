@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 const Parser = require("rss-parser");
 const parser = new Parser();
 const htmlToText = require("html-to-text");

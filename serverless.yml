@@ -3,9 +3,13 @@ service: lessons-of-hn-telegram-bot
 provider:
   name: aws
   runtime: nodejs8.10
+	environment:
+    BOT_API_KEY: ${file(./env.json):BOT_API_KEY}
+    CHANNEL_ID: ${file(./env.json):CHANNEL_ID}
 
 functions:
   cron:
     handler: handler.run
+    description: Cron job that runs every Sunday at 10 am UTC
     events:
       - schedule: cron(0 10 ? * SUN *)

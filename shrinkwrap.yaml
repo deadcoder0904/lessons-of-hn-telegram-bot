@@ -2,7 +2,6 @@ dependencies:
   axios: 0.18.0
   cheerio: 1.0.0-rc.2
   convert-to-spaces: 1.0.2
-  dotenv: 5.0.1
   html-to-text: 4.0.0
   rss-parser: 3.1.3
   trim-newlines: 2.0.0
@@ -99,12 +98,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Lgd2XcJ/NjEw+7tFvfKxOzCYKZsdct5lczQ2ZaQY8Djz7pfAD3Gbp8ySJWtreII/vDlMVmxwa6pHmdxIYgttDg==
-  /dotenv/5.0.1:
-    dev: false
-    engines:
-      node: '>=4.6.0'
-    resolution:
-      integrity: sha512-4As8uPrjfwb7VXC+WnLCbXK7y+Ueb2B3zgNCePYfhxS1PYeaO1YTeplffTEcbfLhvFNGLAz90VvJs9yomG7bow==
   /entities/1.1.1:
     dev: false
     resolution:
@@ -259,7 +252,6 @@ specifiers:
   axios: ^0.18.0
   cheerio: ^1.0.0-rc.2
   convert-to-spaces: ^1.0.2
-  dotenv: ^5.0.1
   html-to-text: ^4.0.0
   rss-parser: ^3.1.3
   trim-newlines: ^2.0.0
