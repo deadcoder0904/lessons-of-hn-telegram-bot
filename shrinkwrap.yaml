@@ -5,17 +5,12 @@ dependencies:
   dotenv: 5.0.1
   html-to-text: 4.0.0
   rss-parser: 3.1.3
-  telegraf: 3.21.1
   trim-newlines: 2.0.0
 packages:
   /@types/node/10.1.2:
     dev: false
     resolution:
       integrity: sha512-bjk1RIeZBCe/WukrFToIVegOf91Pebr8cXYBwLBIsfiGWVQ+ifwWsT59H3RxrWzWrzd1l/Amk1/ioY5Fq3/bpA==
-  /@types/node/9.6.18:
-    dev: false
-    resolution:
-      integrity: sha512-lywCnJQRSsu0kitHQ5nkb7Ay/ScdJPQjhWRtuf+G1DmNKJnPcdVyP0pYvdiDFKjzReC6NLWLgSyimno3kKfIig==
   /axios/0.18.0:
     dependencies:
       follow-redirects: 1.5.0
@@ -172,12 +167,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
-  /node-fetch/2.1.2:
-    dev: false
-    engines:
-      node: 4.x || >=6.0.0
-    resolution:
-      integrity: sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
   /nth-check/1.0.1:
     dependencies:
       boolbase: 1.0.0
@@ -224,12 +213,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
-  /sandwich-stream/1.0.0:
-    dev: false
-    engines:
-      node: '>= 0.10'
-    resolution:
-      integrity: sha1-eDDkV5e1kzKH8fmyj4cZB0ViYvI=
   /sax/1.2.4:
     dev: false
     resolution:
@@ -240,35 +223,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
-  /telegraf/3.21.1:
-    dependencies:
-      '@types/node': 9.6.18
-      debug: 3.1.0
-      node-fetch: 2.1.2
-      sandwich-stream: 1.0.0
-      telegram-typings: 3.6.1
-      typescript: 2.8.3
-    dev: false
-    engines:
-      node: '>=6.2.0'
-    resolution:
-      integrity: sha512-4NgICjuf+eVSNNcXf4nUzRasjK8wLwwDpN4AEpwsNy794drbAjH6NLoCVKaxyu+Z51hGlwK1UghMI+mA26ggJA==
-  /telegram-typings/3.6.1:
-    dev: false
-    resolution:
-      integrity: sha512-njVv1EAhIZnmQVLocZEADYUyqA1WIXuVcDYlsp+mXua/XB0pxx+PKtMSPeZ/EE4wPWTw9h/hA9ASTT6yQelkiw==
   /trim-newlines/2.0.0:
     dev: false
     engines:
       node: '>=4'
     resolution:
       integrity: sha1-tAPQuRvlDDMd/EuC7s6yLD3hbSA=
-  /typescript/2.8.3:
-    dev: false
-    engines:
-      node: '>=4.2.0'
-    resolution:
-      integrity: sha512-K7g15Bb6Ra4lKf7Iq2l/I5/En+hLIHmxWZGq3D4DIRNFxMNV6j2SHSvDOqs2tGd4UvD/fJvrwopzQXjLrT7Itw==
   /util-deprecate/1.0.2:
     dev: false
     resolution:
@@ -302,5 +262,4 @@ specifiers:
   dotenv: ^5.0.1
   html-to-text: ^4.0.0
   rss-parser: ^3.1.3
-  telegraf: ^3.21.1
   trim-newlines: ^2.0.0
