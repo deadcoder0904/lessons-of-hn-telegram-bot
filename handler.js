@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const { lessonsOfHN } = require("./src/lessonsOfHN");
 
-exports.run = async (event, context, callback) => {
+exports.run = async (event, context) => {
   const time = new Date();
   console.log(`Your cron function "${context.functionName}" ran at ${time}`);
 
@@ -22,5 +22,5 @@ exports.run = async (event, context, callback) => {
     }
   });
 
-  callback(null, { lesson, success: true });
+  return { lesson, success: true };
 };
