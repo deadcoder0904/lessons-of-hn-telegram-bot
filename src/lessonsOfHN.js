@@ -4,6 +4,7 @@ const htmlToText = require("html-to-text");
 const cheerio = require("cheerio");
 const convertToSpaces = require("convert-to-spaces");
 const trimNewlines = require("trim-newlines");
+const { writeHash, checkIfHashExists } = require("./firebase");
 
 const LESSONS_OF_HN_FEED =
   "https://us9.campaign-archive.com/feed?u=383e62709f4ac9e20d7d19b59&id=9415e4492e&num=100";
@@ -42,6 +43,10 @@ exports.lessonsOfHN = async () => {
     .replace(/&nbsp;/gm, " ");
   const endingNote = `\n\n\n📫 Email sent on ${pubDate} \n\n🔗 [View this in Browser](${link})\n\n🤔 Want to receive these via email❓\n\n📧 Subscribe to [Lessons Of HN](https://lessonsofhn.com)\n\n\n`;
   const finalNote = `${startNote} ${titleOfContent}${desc} ${endingNote}`;
+
+  if (checkIfHashExists(titleOfContent)) return false;
+
+  writeHash(titleOfContent);
 
   return finalNote;
 };

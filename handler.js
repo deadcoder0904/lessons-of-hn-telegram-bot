@@ -7,6 +7,8 @@ exports.run = async (event, context) => {
   console.log(`Your cron function "${context.functionName}" ran at ${time}`);
 
   const lesson = await lessonsOfHN();
+
+  if (lesson) return { success: false };
   const ENDPOINT = `https://api.telegram.org/bot${
     process.env.BOT_API_KEY
   }/sendMessage`;

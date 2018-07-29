@@ -4,6 +4,8 @@
 
 Checkout [Serverless Hello World](https://github.com/deadcoder0904/serverless-hello-world) for Deployment Info
 
+Also, run `npm run postinstall` before deploying
+
 You also need to change `env.example.json` file to `env.json` file & set the environment variables to run it
 
 Join at https://t.me/lessonsofhn

@@ -6,6 +6,12 @@ provider:
   environment:
     BOT_API_KEY: ${file(./env.json):BOT_API_KEY}
     CHANNEL_ID: ${file(./env.json):CHANNEL_ID}
+    API_KEY: ${file(./env.json):FIREBASE.apiKey}
+    AUTH_DOMAIN: ${file(./env.json):FIREBASE.authDomain}
+    DATABASE_URL: ${file(./env.json):FIREBASE.databaseURL}
+    PROJECT_ID: ${file(./env.json):FIREBASE.projectId}
+    STORAGE_BUCKET: ${file(./env.json):FIREBASE.storageBucket}
+    MESSAGING_SENDER_ID: ${file(./env.json):FIREBASE.messagingSenderId}
 
 functions:
   cron:
